@@ -1,0 +1,18 @@
+{
+  "name": "gzip-size-online",
+  "version": "1.0.0",
+  "description": "A tool for measuring the gzip size of a file online.",
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+		"url": "git://github.com/Dafrok/gzip-size-online.git"
+  },
+  "scripts": {
+    "dev": "browser-sync start --server -f ./static/** ./index.html"
+  },
+  "author": "Dafrok <o.o@mug.dog>",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.23.6"
+  }
+}

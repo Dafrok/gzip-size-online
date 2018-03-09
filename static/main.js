@@ -24,9 +24,6 @@ on(fileReader, 'loadend', function (e) {
 on($text, 'input', function (e) {
     showResult(e.target.value)
 })
-// on($text, 'change', function (e) {
-//     showResult(e.target.value)
-// })
 
 on($file, 'change', function (e) {
     var file = e.target.files[0]

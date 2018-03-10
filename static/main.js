@@ -11,7 +11,12 @@ function on($el, event, callback) {
 }
 
 function showResult(value) {
-    $result.innerHTML = [value.length, gzip.zip(value).length].join(',')
+    $result.innerHTML = [
+        'original size:',
+        value.length,
+        ' / ',
+        'gzipped size:',
+        gzip.zip(value).length].join(' ')
 }
 
 var fileReader = new FileReader()
@@ -22,10 +27,11 @@ on(fileReader, 'loadend', function (e) {
 })
 
 on($text, 'input', function (e) {
+    $file.value = ''
     showResult(e.target.value)
 })
 
 on($file, 'change', function (e) {
     var file = e.target.files[0]
-    fileReader.readAsText(file)
+    file && fileReader.readAsText(file)
 })

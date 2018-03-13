@@ -5,7 +5,7 @@
   "main": "index.html",
   "repository": {
     "type": "git",
-		"url": "git://github.com/Dafrok/gzip-size-online.git"
+    "url": "git://github.com/Dafrok/gzip-size-online.git"
   },
   "scripts": {
     "dev": "browser-sync start --server -f ./static/** ./index.html"

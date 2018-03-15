@@ -1,6 +1,7 @@
 var $result = $('#result')
 var $text = $('#text')
 var $file = $('#file')
+var $level = $('#level')
 
 function $(selector) {
     return document.querySelector(selector)
@@ -16,7 +17,7 @@ function showResult(value) {
         value.length,
         ' / ',
         'gzipped size:',
-        gzip.zip(value).length].join(' ')
+        gzip.zip(value, {level: +$level.value}).length].join(' ')
 }
 
 var fileReader = new FileReader()
@@ -34,4 +35,8 @@ on($text, 'input', function (e) {
 on($file, 'change', function (e) {
     var file = e.target.files[0]
     file && fileReader.readAsText(file)
+})
+
+on($level, 'change', function (e) {
+    showResult($text.value)
 })

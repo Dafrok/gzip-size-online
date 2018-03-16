@@ -1,6 +1,26 @@
 * {
     box-sizing: border-box;
 }
+.form-control {
+    height: 32px;
+}
 textarea, input {
-    width: 100%
+    width: 100%;
+}
+input, label, select {
+    vertical-align: middle;
+    height: 24px;
+}
+input[type=file] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.upload {
+    display: inline-block;
+    border: 1px solid #ccc;
+    background: #eee;
+    padding: 0 10px;
+    height: 24px;
+    line-height: 24px;
 }

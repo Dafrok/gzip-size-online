@@ -1,0 +1,24 @@
+    html(lang="en")
+        head
+            meta(charset="UTF-8")
+            meta(name="viewport", content="width=device-width, initial-scale=1.0")
+            meta(http-equiv="X-UA-Compatible", content="ie=edge")
+            title GZip Size Online
+            link(rel="stylesheet" href="static/style.css")
+    body
+        h1 GZip Size Online
+        p#result Upload a file or put your text below.
+        .form-control
+            label
+                a.upload(type="submit") UPLOAD...
+                input#file(type="file")
+        .form-control
+            label LEVEL
+            select#level
+                - var n = 1
+                while n < 10
+                    li(selected=n === 6 ? true : false)= n++
+        .form-control
+            textarea#text(rows="20")
+        script(src="static/gzip.js")
+        script(src="static/main.js")
